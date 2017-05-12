@@ -157,6 +157,30 @@ section p {
   transition: all 0.5s ease;
 }
 
+.donate-button[hover="Bitcoin"] .bitcoin-addr {
+  background-color: #fff;
+  box-shadow: 0 2px 4px #666;
+  left: 50%;
+  opacity: 0;
+  padding: 4px;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  transition: all 0.5s ease;
+  z-index: -2;
+}
+
+.donate-button[hover="Bitcoin"]:hover .bitcoin-addr {
+  opacity: 1;
+  z-index: 3;
+}
+
+.donate-button[hover="Bitcoin"] .bitcoin-addr td:first-child {
+  font-weight: bold;
+  padding-right: 3px;
+  text-align: right;
+}
+
 .donate-button:hover::after {
   opacity: 1;
   transform: translate(-50%, 0%);
@@ -196,4 +220,15 @@ section p {
   td {
     text-align: center;
   }
+
+  .donate-button[hover="Bitcoin"] .bitcoin-addr td:first-child {
+    font-weight: normal;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .donate-button[hover="Bitcoin"] .bitcoin-addr td:last-child {
+    font-size: 0.75em;
+  }
+
 }
