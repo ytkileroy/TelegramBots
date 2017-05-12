@@ -1,0 +1,158 @@
+/*
+ * Purple 900: 4A148C;
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  flex-direction: column;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+}
+
+nav {
+  background-color: #3f036d;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav .container {
+  align-items: center;
+  display: flex;
+  height: 50px;
+}
+
+nav .logo {
+  flex-grow: 1;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 25px;
+  text-shadow: 0 0 4px #fb8eff;
+}
+
+nav .link {
+  align-items: center;
+  display: flex;
+  font-family: 'Roboto';
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+}
+
+nav .link::before {
+  background: linear-gradient(transparent, #fb8eff);
+  border-bottom: solid 2px white;
+  bottom: 0;
+  content: '';
+  height: 10px;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+  width: 0;
+}
+
+nav .link:hover::before {
+  width: 100%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+section a {
+  color: #aa25b2;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding: 5px;
+  text-align: center;
+  width: auto;
+}
+
+header a {
+  color: #fff;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 40px;
+  text-shadow: 0 0 4px #fb8eff;
+}
+
+section h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+section p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 5px auto;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.command {
+  border-radius: 2px;
+  color: #4a004f;
+  font-family: monospace;
+  padding: 8px;
+}
+
+
+@media screen and (max-width: 800px) {
+  nav .logo {
+    font-size: 15px;
+  }
+
+  header a {
+    font-size: 30px;
+  }
+  
+  .card {
+    margin: 5px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  table {
+    margin: auto;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  td {
+    text-align: center;
+  }
+}
