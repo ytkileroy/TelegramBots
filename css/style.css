@@ -124,6 +124,25 @@ section p {
   padding: 8px;
 }
 
+.icons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.donate-button {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  padding: 4px;
+}
+
+.donate-button img, .donate-button input[type=image] {
+  max-height: 40px;
+}
 
 @media screen and (max-width: 800px) {
   nav .logo {
