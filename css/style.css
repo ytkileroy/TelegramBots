@@ -137,7 +137,29 @@ section p {
   display: flex;
   height: 40px;
   justify-content: center;
-  padding: 4px;
+  margin: 4px;
+  position: relative;
+}
+
+.donate-button::after {
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  content: attr(hover);
+  left: 50%;
+  opacity: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  transform: translate(-50%, 20%);
+  transition: all 0.5s ease;
+}
+
+.donate-button:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0%);
 }
 
 .donate-button img, .donate-button input[type=image] {
